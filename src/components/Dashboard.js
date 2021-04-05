@@ -1,6 +1,6 @@
 import Header from './Header';
 import Footer from './Footer';
-import Hypertension from './hypertension/Hypertension';
+import Survey from './Survey/Survey';
 
 /**
  * A demo dashboard
@@ -9,7 +9,7 @@ const Dashboard = () => {
     return (
         <>
             <Header />
-            <Hypertension />
+            <Survey />
             <Footer />
         </>
     );

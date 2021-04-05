@@ -6,9 +6,9 @@ const Loading = () => {
     <Container>
         <Row>
             <div className="mx-auto mt-5 mb-5 text-center" style={{ width: '500px'}}>
-                <img src={logo} alt="CardinalKit Logo"/>
+                <img src={logo} alt="Viranos Logo"/>
                 <br />
-                <h2>CardinalKit</h2>
+                <h2>Viranos</h2>
                 <br />
                 <h4 className="lead">Loading SMART dashboard...</h4>
                 <br />

@@ -6,7 +6,7 @@ const Footer = () => {
             <Container>
                 <div>
                     <hr />
-                    <p className="text-center">SMART Provider Dashboard for <a href="https://cardinalkit.org" target="_blank" rel="noreferrer">CardinalKit</a></p>
+                    <p className="text-center">Dashboard for <a href="https://viranos.org" target="_blank" rel="noreferrer">Viranos</a></p>
                 </div>
             </Container>
         </footer>

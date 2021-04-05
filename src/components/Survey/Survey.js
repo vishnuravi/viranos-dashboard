@@ -1,12 +1,12 @@
 import { Container, Tabs, Tab } from 'react-bootstrap';
 import MedicationLog from './MedicationLog';
-import BPChart from './BPChart';
+import BPChart from './Chart';
 import PatientBanner from './PatientBanner';
 
 /**
- * An example dashboard that visualizes useful information for managing hypertension
+ * A dashboard that visualizes data from surveys
  */
-export default function Hypertension() {
+export default function Survey() {
     return (
         <>
             <Container style={{ marginTop: '6em' }}>

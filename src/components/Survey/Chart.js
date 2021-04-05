@@ -6,9 +6,7 @@ import { useFHIRClient } from '../../context/FHIRClientContext';
 import moment from 'moment';
 import * as zoom from 'chartjs-plugin-zoom';
 
-
-
-const BPChart = () => {
+const Chart = () => {
 
     const fhirClient = useFHIRClient();
     const patientId = fhirClient.patient.id;
@@ -100,4 +98,4 @@ const BPChart = () => {
     )
 };
 
-export default BPChart;
+export default Chart;
