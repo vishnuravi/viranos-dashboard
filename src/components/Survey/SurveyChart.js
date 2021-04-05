@@ -6,28 +6,25 @@ import { useFHIRClient } from '../../context/FHIRClientContext';
 import moment from 'moment';
 import * as zoom from 'chartjs-plugin-zoom';
 
-const Chart = () => {
+const SurveyChart = () => {
 
     const fhirClient = useFHIRClient();
-    const patientId = fhirClient.patient.id;
+    const patientId = '92de4d08-6b7b-43a9-9e23-1689ce27be97';
 
-    const [systolicReadings, setSystolicReadings] = useState();
-    const [diastolicReadings, setDiastolicReadings] = useState();
-    const [adherenceLog, setAdherenceLog] = useState();
+    const [physicalHealth, setPhysicalHealth] = useState();
+    const [mentalHealth, setMentalHealth] = useState();
 
     useEffect(() => {
         // format data for chart
         const result = data.filter((patient) => patient.patientId === patientId)[0];
 
         if (result) {
-            const systolicData = result.bp_measurements.map(({ date, systolic }) => ({ x: new Date(date), y: systolic }));
-            setSystolicReadings(systolicData);
+            const physicalData = result.survey_responses.map(({ date, physical }) => ({ x: new Date(date), y: physical }));
+            setPhysicalHealth(physicalData);
 
-            const diastolicData = result.bp_measurements.map(({ date, diastolic }) => ({ x: new Date(date), y: diastolic }));
-            setDiastolicReadings(diastolicData);
+            const mentalData = result.survey_responses.map(({ date, mental }) => ({ x: new Date(date), y: mental }));
+            setMentalHealth(mentalData);
 
-            const adherenceData = result.adherence_log.map(({ date }) => ({ x: new Date(date), y: 0 }));
-            setAdherenceLog(adherenceData);
         }
     }, [patientId]);
 
@@ -35,30 +32,20 @@ const Chart = () => {
     const chartData = {
         datasets: [
             {
-                label: 'Systolic',
-                data: systolicReadings,
+                label: 'Physical Health',
+                data: physicalHealth,
                 fill: false,
                 backgroundColor: 'rgb(215, 51, 255)',
                 borderColor: 'rgba(255, 51, 246, 0.2)',
                 pointRadius: 6
             },
             {
-                label: 'Diastolic',
-                data: diastolicReadings,
+                label: 'Mental Health',
+                data: mentalHealth,
                 fill: false,
                 backgroundColor: 'rgb(255, 0, 0)',
                 borderColor: 'rgba(255, 102, 102, 0.2)',
                 pointRadius: 6
-            },
-            {
-                label: 'Meds Taken',
-                data: adherenceLog,
-                pointStyle: 'rect',
-                fill: false,
-                borderColor: 'rgba(50,205,50, 0.8)',
-                backgroundColor: 'rgba(50,205,50, 0.8)',
-                pointRadius: 10,
-                showLine: false
             }
         ]
     };
@@ -90,12 +77,12 @@ const Chart = () => {
 
     return (
         <Container className="p-3">
-            { (systolicReadings && diastolicReadings) ?
+            { (physicalHealth && mentalHealth) ?
                 <Line data={chartData} options={options} />
                 :
-                <p className="lead">No blood pressure data available.</p>}
+                <p className="lead">No survey data available.</p>}
         </Container>
     )
 };
 
-export default Chart;
+export default SurveyChart;

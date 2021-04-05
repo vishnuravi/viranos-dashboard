@@ -1,6 +1,6 @@
 import { Container, Tabs, Tab } from 'react-bootstrap';
-import MedicationLog from './MedicationLog';
-import BPChart from './Chart';
+import SymptomLog from './SymptomLog';
+import SurveyChart from './SurveyChart';
 import PatientBanner from './PatientBanner';
 
 /**
@@ -11,12 +11,12 @@ export default function Survey() {
         <>
             <Container style={{ marginTop: '6em' }}>
                 <PatientBanner />
-                <Tabs defaultActiveKey="bpchart">
-                    <Tab eventKey="bpchart" title="BP Trend">
-                        <BPChart />
+                <Tabs defaultActiveKey="surveychart">
+                    <Tab eventKey="surveychart" title="Survey Chart">
+                        <SurveyChart />
                     </Tab>
-                    <Tab eventKey="medlog" title="Medication Log">
-                        <MedicationLog />
+                    <Tab eventKey="symptomlog" title="Symptom Log">
+                        <SymptomLog />
                     </Tab>
                 </Tabs>
             </Container>

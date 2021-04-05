@@ -1,36 +1,36 @@
 [
     {
         "patientId" : "92de4d08-6b7b-43a9-9e23-1689ce27be97",
-        "bp_measurements": [
-            { "date": "2021-02-14", "systolic": 180, "diastolic": 100 },
-            { "date": "2021-02-15", "systolic": 170, "diastolic": 90 },
-            { "date": "2021-02-16", "systolic": 160, "diastolic": 80 },
-            { "date": "2021-02-17", "systolic": 152, "diastolic": 90 },
-            { "date": "2021-02-18", "systolic": 154, "diastolic": 88 },
-            { "date": "2021-02-19", "systolic": 140, "diastolic": 82 },
-            { "date": "2021-02-20", "systolic": 140, "diastolic": 82 },
-            { "date": "2021-02-21", "systolic": 130, "diastolic": 86 },
-            { "date": "2021-02-22", "systolic": 132, "diastolic": 88 },
-            { "date": "2021-02-23", "systolic": 137, "diastolic": 82 },
-            { "date": "2021-02-24", "systolic": 136, "diastolic": 85 },
-            { "date": "2021-02-25", "systolic": 132, "diastolic": 81 },
-            { "date": "2021-02-26", "systolic": 126, "diastolic": 78 },
-            { "date": "2021-02-27", "systolic": 120, "diastolic": 86 },
-            { "date": "2021-02-28", "systolic": 138, "diastolic": 82 },
-            { "date": "2021-03-01", "systolic": 132, "diastolic": 76 },
-            { "date": "2021-03-02", "systolic": 125, "diastolic": 78 },
-            { "date": "2021-03-03", "systolic": 130, "diastolic": 80 },
-            { "date": "2021-03-04", "systolic": 130, "diastolic": 82 },
-            { "date": "2021-03-05", "systolic": 120, "diastolic": 86 },
-            { "date": "2021-03-06", "systolic": 138, "diastolic": 82 },
-            { "date": "2021-03-07", "systolic": 132, "diastolic": 76 },
-            { "date": "2021-03-08", "systolic": 125, "diastolic": 78 },
-            { "date": "2021-03-09", "systolic": 130, "diastolic": 80 }
+        "survey_responses": [
+            { "date": "2021-02-14", "physical": 30, "mental": 50 },
+            { "date": "2021-02-15", "physical": 35, "mental": 52 },
+            { "date": "2021-02-16", "physical": 35, "mental": 56 },
+            { "date": "2021-02-17", "physical": 37, "mental": 54 },
+            { "date": "2021-02-18", "physical": 40, "mental": 55 },
+            { "date": "2021-02-19", "physical": 41, "mental": 52 },
+            { "date": "2021-02-20", "physical": 38, "mental": 60 },
+            { "date": "2021-02-21", "physical": 45, "mental": 58 },
+            { "date": "2021-02-22", "physical": 46, "mental": 62 },
+            { "date": "2021-02-23", "physical": 49, "mental": 57 },
+            { "date": "2021-02-24", "physical": 52, "mental": 59 },
+            { "date": "2021-02-25", "physical": 54, "mental": 61 },
+            { "date": "2021-02-26", "physical": 55, "mental": 57 },
+            { "date": "2021-02-27", "physical": 60, "mental": 59 },
+            { "date": "2021-02-28", "physical": 62, "mental": 56 },
+            { "date": "2021-03-01", "physical": 64, "mental": 59 },
+            { "date": "2021-03-02", "physical": 64, "mental": 61 },
+            { "date": "2021-03-03", "physical": 68, "mental": 62 },
+            { "date": "2021-03-04", "physical": 68, "mental": 66 },
+            { "date": "2021-03-05", "physical": 70, "mental": 63 },
+            { "date": "2021-03-06", "physical": 69, "mental": 62 },
+            { "date": "2021-03-07", "physical": 70, "mental": 64 },
+            { "date": "2021-03-08", "physical": 70, "mental": 63 },
+            { "date": "2021-03-09", "physical": 68, "mental": 63 }
         ],
-        "medications": [ 
+        "symptoms": [ 
             { 
-                "medication_name": "Lisinopril 20 MG Oral Tablet",
-                "dates_taken": [
+                "symptom_name": "Fatigue",
+                "dates_reported": [
                     { "date": "2021-02-14" }, 
                     { "date": "2021-02-15" }, 
                     { "date": "2021-02-17" }, 
@@ -54,8 +54,8 @@
                 ] 
             },
             { 
-                "medication_name": "Hydrochlorothiazide 25 MG Oral Tablet",
-                "dates_taken": [
+                "symptom_name": "Shortness of Breath",
+                "dates_reported": [
                     { "date": "2021-02-14" }, 
                     { "date": "2021-02-15" }, 
                     { "date": "2021-02-17" }, 
@@ -78,28 +78,6 @@
                     { "date": "2021-03-08" }
                 ] 
             }
-        ],
-        "adherence_log": [
-            { "date": "2021-02-14" }, 
-            { "date": "2021-02-15" }, 
-            { "date": "2021-02-17" }, 
-            { "date": "2021-02-18" }, 
-            { "date": "2021-02-20" }, 
-            { "date": "2021-02-21" }, 
-            { "date": "2021-02-23" }, 
-            { "date": "2021-02-24" }, 
-            { "date": "2021-02-25" }, 
-            { "date": "2021-02-26" },
-            { "date": "2021-02-27" }, 
-            { "date": "2021-02-28" }, 
-            { "date": "2021-03-01" }, 
-            { "date": "2021-03-02" }, 
-            { "date": "2021-03-03" }, 
-            { "date": "2021-03-04" },
-            { "date": "2021-03-05" }, 
-            { "date": "2021-03-06" }, 
-            { "date": "2021-03-07" }, 
-            { "date": "2021-03-08" }
-        ] 
+        ]
     }
 ]
