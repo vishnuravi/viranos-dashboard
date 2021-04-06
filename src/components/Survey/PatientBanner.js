@@ -9,8 +9,7 @@ const PatientBanner = () => {
     return (
         <div className="mt-2">
             <p className="lead">
-                <strong>{formatName(patient)}</strong> · {moment().diff(patient.birthDate, 'years')}-year-old {patient.gender || ""} ·
-                DOB: {moment(patient.birthDate).format('MM/DD/YYYY')}
+                <strong>{formatName(patient)}</strong> · DOB: {moment(patient.birthDate).format('MM/DD/YYYY')}
             </p>
         </div>
     )
