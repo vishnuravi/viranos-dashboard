@@ -66,8 +66,8 @@ const SurveyChart = () => {
             xAxes: [{
                 type: 'time',
                 time: {
-                    unit: 'day',
-                    suggestedMin: moment().subtract(14, 'days').toDate(),
+                    unit: 'week',
+                    suggestedMin: moment().subtract(8, 'weeks').toDate(),
                     suggestedMax: moment().toDate(),
                 }
             }]
