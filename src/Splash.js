@@ -1,4 +1,4 @@
-import logo from './images/cardinalkit_logo.png';
+import logo from './images/viranos_logo.png';
 
 export default function Splash() {
     return (

@@ -1,5 +1,5 @@
 import { Navbar } from 'react-bootstrap';
-import logo from '../images/cardinal_logo_white.svg';
+import logo from '../images/viranos_logo.png';
 import { useUser } from '../context/UserContext';
 import { useFHIRClient } from '../context/FHIRClientContext';
 import { formatName } from '../fhir';
@@ -15,29 +15,31 @@ const Header = () => {
         // if no context available, then get from ID token
         if (user) {
             return formatName(user);
-        } else if(id_token) {
+        } else if (id_token) {
             return id_token.given_name + " " + id_token.family_name;
         } else {
-            return "User not available";
+            return "Unknown User";
         }
     }
 
     return (
-        <Navbar className="cardinalkit-bg-color" fixed="top" expand="lg">
+        <Navbar className="header-bg-color" fixed="top" expand="lg">
             <Navbar.Brand href="#home">
                 <img
                     src={logo}
                     className="d-inline-block align-top"
-                    alt="CardinalKit Logo"
+                    alt="Viranos Logo"
                     height="50"
                 />
             </Navbar.Brand>
             <Navbar.Text className="text-white mx-auto">
-                <h4>Viranos Dashboard</h4>
+                <h4>Viranos Long COVID-19 Dashboard</h4>
             </Navbar.Text>
-            <Navbar.Text className="text-white ml-auto">
-                <Button variant="dark"> {getProviderName()}</Button>
-            </Navbar.Text>
+            {getProviderName() !== "Unknown User" &&
+                <Navbar.Text className="text-white ml-auto">
+                    <Button variant="dark"> {getProviderName()}</Button>
+                </Navbar.Text>
+            }
         </Navbar>
     )
 }

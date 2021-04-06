@@ -32,7 +32,7 @@ const SurveyChart = () => {
     const chartData = {
         datasets: [
             {
-                label: 'Physical Health',
+                label: 'Composite Physical Health',
                 data: physicalHealth,
                 fill: false,
                 backgroundColor: 'rgb(215, 51, 255)',
@@ -40,7 +40,7 @@ const SurveyChart = () => {
                 pointRadius: 6
             },
             {
-                label: 'Mental Health',
+                label: 'Composite Mental Health',
                 data: mentalHealth,
                 fill: false,
                 backgroundColor: 'rgb(255, 0, 0)',

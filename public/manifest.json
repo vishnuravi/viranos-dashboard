@@ -1,6 +1,6 @@
 {
-  "short_name": "CardinalKit SMART Dashboard",
-  "name": "CardinalKit SMART-on-FHIR Dashboard",
+  "short_name": "Viranos SMART Dashboard",
+  "name": "Viranos Long COVID SMART-on-FHIR Dashboard",
   "icons": [
     {
       "src": "favicon.ico",

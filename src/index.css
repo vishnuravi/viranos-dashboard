@@ -12,6 +12,8 @@ code {
     monospace;
 }
 
-.cardinalkit-bg-color {
-  background-color: #ff3554 !important;
+.header-bg-color {
+  background-color: #000099 !important;
 }
+
+.react-calendar-heatmap .color-present { fill: #F9627D; }

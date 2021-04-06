@@ -31,7 +31,7 @@ const SymptomLog = () => {
             {(symptomLogs && symptomLogs.length) ? symptomLogs.map((log) => {
                 return (
                     <>
-                        <h4 className="lead">{log.symptom_name}</h4>
+                        <h4 className="lead"><strong>{log.symptom_name}</strong></h4>
                         <br />
                         <CalendarHeatmap
                             startDate={moment().subtract(6, 'months').toDate()}
@@ -40,6 +40,12 @@ const SymptomLog = () => {
                             horizontal={true}
                             gutterSize={5}
                             values={log.dates_reported}
+                            classForValue={(value) => {
+                                if (!value) {
+                                    return 'color-empty';
+                                }
+                                return 'color-present'
+                            }}
                         />
                     </>
                 )

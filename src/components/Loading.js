@@ -1,12 +1,12 @@
 import { Container, Row, Spinner } from 'react-bootstrap';
-import logo from '../images/cardinalkit_logo.png';
+import logo from '../images/viranos_logo.png';
 
 const Loading = () => {
     return (
     <Container>
         <Row>
             <div className="mx-auto mt-5 mb-5 text-center" style={{ width: '500px'}}>
-                <img src={logo} alt="Viranos Logo"/>
+                <img src={logo} width="150" alt="Viranos Logo"/>
                 <br />
                 <h2>Viranos</h2>
                 <br />
